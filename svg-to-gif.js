@@ -26,7 +26,7 @@ function svgToGif(svg, gif, progress) {
         // Add the frame to GIF.js
         const img = new Image()
         img.addEventListener('load', ()=> {
-            gif.addFrame(img, { delay: 20 });
+            gif.addFrame(img, { delay: 60 });
             progress(gif.frames.length)
         });
         img.src = 'data:image/svg+xml;base64,'+btoa(serializer.serializeToString(copy));
