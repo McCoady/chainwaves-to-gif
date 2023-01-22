@@ -170,7 +170,7 @@
 
             // Render SVG -> GIF
             render.onclick = async () => {
-                gif = new GIF({workers: 4, quality:1, globalPalette:true});
+                gif = new GIF({workers: 4, quality:5, globalPalette:true});
                 gif.on("progress", p => render.textContent = `Rendering (${Math.round(100*p)}%)`);
                 gif.on('finished', function(blob) {
                     gif.abort();
